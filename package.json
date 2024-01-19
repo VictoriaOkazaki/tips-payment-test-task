@@ -1,0 +1,18 @@
+{
+  "name": "nuxt-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.2",
+    "core-js": "^3.35.0",
+    "nuxt": "^2.17.3",
+    "sass": "^1.70.0",
+    "sass-loader": "^10.5.2"
+  }
+}
