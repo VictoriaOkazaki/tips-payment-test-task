@@ -12,10 +12,10 @@
                 <CustomSwitch v-model="isChecked" />
             </div>
 
-            <button :disabled="!isAgree" class="apple-pay button">
+            <button :disabled="!isAgree" class="apple-pay button" @click="payByApple">
                 <img src="../assets/images/apple-pay.svg" alt="apple-pay">
             </button>
-            <button :disabled="!isAgree" class="card-pay button">Pay by card</button>
+            <button :disabled="!isAgree" class="card-pay button" @click="payByCard">Pay by card</button>
             <div class="pay__bottom">
                 <CustomCheckbox v-model="isAgree">
                     <div class="pay__bottom-text">I agree with <a>Terms & Conditions</a>
@@ -42,6 +42,14 @@ export default {
 
             if (!this.isChecked) return num
             return (num * 1.1).toFixed(2)
+        }
+    },
+    methods: {
+        payByApple() {
+            console.log('payByApple')
+        },
+        payByCard() {
+            console.log('payByCard')
         }
     }
 }
@@ -108,12 +116,14 @@ a {
     width: 100%;
 }
 
-.button:disabled {
-    opacity: 0.6;
-}
+
 
 .button:active {
     opacity: 0.8;
+}
+
+.button:disabled {
+    opacity: 0.6;
 }
 
 .apple-pay {
