@@ -1,9 +1,12 @@
 <template>
-    <div class="circle-cont">
-        <img src="../assets/images/logo.svg" alt="logo" class="logo">
-        <img src="../assets/images/circle.svg" class="circle">
+    <div>
+        <div class="circle-cont">
+            <img src="../assets/images/logo.svg" alt="logo" class="logo">
+            <img src="../assets/images/circle.svg" class="circle">
+        </div>
     </div>
 </template>
+
 <script>
 export default {
 }
