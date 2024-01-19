@@ -65,7 +65,7 @@ export default {
 
     &__inner {
         background-color: #fff;
-        padding: 44px 20px 18px 20px;
+        padding: 44px 24px 18px 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
