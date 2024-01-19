@@ -74,11 +74,9 @@ export default {
     }
 
     &__title {
-        font-size: 24px;
-        font-style: 120%;
         font-weight: 600;
         padding: 9px 15px;
-        background-color: $violet-2;
+        background-color: $violet;
         border-radius: 6px;
         text-align: center;
         color: $green;

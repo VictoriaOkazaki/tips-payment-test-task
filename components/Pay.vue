@@ -40,8 +40,8 @@ export default {
             const num = Number(this.tipAmount.replace('€', ''))
             if (isNaN(num)) return 0
 
-            if (!this.isChecked) return num
-            return (num * 1.1).toFixed(2)
+            if (!this.isChecked) return 0
+            return num * 0.1
         }
     },
     methods: {
@@ -87,6 +87,7 @@ a {
     &__content-title {
         color: $black;
         margin-bottom: 6px;
+        line-height: 16px;
     }
 
     &__content-text {
@@ -94,6 +95,7 @@ a {
         font-style: normal;
         font-weight: 500;
         color: #808191;
+        line-height: 13px;
     }
 
     &__bottom {
