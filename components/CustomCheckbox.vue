@@ -1,27 +1,14 @@
 <template>
-    <div class="">
-        <input class="styled-checkbox" :id="inputId" type="checkbox" @click="toggleSwitch" :checked="value">
-        <label :for="inputId"></label>
+    <div class="checkbox-wrapper" @click="toggleSwitch">
+        <input class="styled-checkbox" @click.stop="toggleSwitch" type="checkbox" :checked="value">
+        <label @click.stop="toggleSwitch"></label>
+        <slot />
     </div>
 </template>
-<script>
-function guidGenerator() {
-    var S4 = function () {
-        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
-    };
-    return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
-}
 
+<script>
 export default {
     props: ['value'],
-    data() {
-        return {
-            inputId: ''
-        }
-    },
-    created() {
-        this.inputId = guidGenerator()
-    },
     methods: {
         toggleSwitch() {
             this.$emit('input', !this.value);
@@ -31,6 +18,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .styled-checkbox {
     position: absolute; // take it out of document flow
     opacity: 0; // hide it

@@ -17,9 +17,10 @@
             </button>
             <button :disabled="!isAgree" class="card-pay button">Pay by card</button>
             <div class="pay__bottom">
-                <CustomCheckbox v-model="isAgree" />
-                <div class="pay__bottom-text">I agree with <a>Terms & Conditions</a>
-                    and <a>Privacy policy</a></div>
+                <CustomCheckbox v-model="isAgree">
+                    <div class="pay__bottom-text">I agree with <a>Terms & Conditions</a>
+                        and <a>Privacy policy</a></div>
+                </CustomCheckbox>
             </div>
         </div>
     </section>

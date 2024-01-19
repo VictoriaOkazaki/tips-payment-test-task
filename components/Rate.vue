@@ -12,20 +12,24 @@
                 <div class="rate__addition-title p">What did you enjoy the most?</div>
                 <ul class="rate__addition-list">
                     <li class="rate__addition-item">
-                        <CustomCheckbox v-model="rate.service" />
-                        <div class="rate__addition-item-text p">Service</div>
+                        <CustomCheckbox v-model="rate.service">
+                            <div class="rate__addition-item-text p">Service</div>
+                        </CustomCheckbox>
                     </li>
                     <li class="rate__addition-item">
-                        <CustomCheckbox v-model="rate.cleanliness" />
-                        <div class="rate__addition-item-text p">Cleanliness</div>
+                        <CustomCheckbox v-model="rate.cleanliness">
+                            <div class="rate__addition-item-text p">Cleanliness</div>
+                        </CustomCheckbox>
                     </li>
                     <li class="rate__addition-item">
-                        <CustomCheckbox v-model="rate.atmosphere" />
-                        <div class="rate__addition-item-text p">Atmosphere</div>
+                        <CustomCheckbox v-model="rate.atmosphere">
+                            <div class="rate__addition-item-text p">Atmosphere</div>
+                        </CustomCheckbox>
                     </li>
                     <li class="rate__addition-item">
-                        <CustomCheckbox v-model="rate.foodQuality" />
-                        <div class="rate__addition-item-text p">Food quality</div>
+                        <CustomCheckbox v-model="rate.foodQuality">
+                            <div class="rate__addition-item-text p">Food quality</div>
+                        </CustomCheckbox>
                     </li>
                 </ul>
                 <textarea v-model="rate.review" class="rate__addition-textarea p" rows="2"></textarea>
