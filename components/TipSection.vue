@@ -6,7 +6,7 @@
             <div class="tip__input-wrapper">
                 <input :class="{ 'error': isError }" class="tip__input h2" type="text" :value="value"
                     @input="inputTipAmount" placeholder="Tip amount" inputmode="numeric" />
-                <button v-if="value" class="tip__input-clear-btn" @click="setTipAmount(0)">
+                <button v-if="value" class="tip__input-clear-btn" @click="setTipAmount('')">
                     <img src="../assets/images/close.svg" alt="close">
                 </button>
             </div>
@@ -117,6 +117,7 @@ export default {
         position: absolute;
         right: 10px;
         top: 10px;
+        background: none;
     }
 
     &__btns-cont {
