@@ -9,6 +9,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Tip payment"
+    };
+  },
   data() {
     return {
       tipAmount: '5€',

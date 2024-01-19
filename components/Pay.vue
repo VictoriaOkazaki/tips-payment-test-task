@@ -112,6 +112,10 @@ a {
     opacity: 0.6;
 }
 
+.button:active {
+    opacity: 0.8;
+}
+
 .apple-pay {
     border: 2px #DDE3F1 solid;
     margin-bottom: 13px;
